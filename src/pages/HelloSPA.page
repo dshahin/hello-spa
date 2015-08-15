@@ -1,0 +1,27 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false"  >
+	
+	<head>
+		<title>Hello, SPA!</title>
+
+		<link rel="stylesheet" href="{!URLFOR($Resource.HelloSPA, '/HelloSPA/app.css')}"/>
+		
+		<script type="text/javascript">
+
+		//this is our only global variable
+		configSettings ={
+			firstName : '{!$User.firstName}',
+			lastName  : '{!$User.lastName}'
+		}
+
+		</script>
+	</head>
+
+	<body>
+
+		<h1>Hello, <span id="userName"></span></h1>
+		
+		<script type="text/javascript" src="{!URLFOR($Resource.HelloSPA, '/HelloSPA/app.js')}"/>
+		
+	</body>
+
+</apex:page>
