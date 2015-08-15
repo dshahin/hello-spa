@@ -1,5 +1,5 @@
 # hello-spa
-<a href="https://boiling-dawn-9130.herokuapp.com/?owner=CodeScience&repo=CSUtils">
+<a href="https://githubsfdeploy.herokuapp.com/app/githubdeploy/dshahin/hello-spa">
   <img alt="Deploy to Salesforce"
-       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/step-1/src/main/webapp/resources/img/deploy.png">
+       src="https://raw.githubusercontent.com/afawcett/githubsfdeploy/master/src/main/webapp/resources/img/deploy.png">
 </a>
