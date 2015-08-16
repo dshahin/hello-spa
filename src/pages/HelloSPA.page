@@ -2,11 +2,7 @@
 	
 	<head>
 		<title>Hello, SPA!</title>
-
-		<style>
-			body {background-color: lightblue;}
-		</style>
-		
+		<link rel="stylesheet" href="{!URLFOR($Resource.HelloSPA, 'app.css')}"/>
 		<script type="text/javascript" charset="UTF-8">
 
 		//this is our only global variable
@@ -21,8 +17,8 @@
 	<body>
 
 		<h1>Hello, <span id="userName"></span></h1>
-		
-		<script type="text/javascript" charset="UTF-8" src="{!URLFOR($Resource.HelloSPA)}"/>
+		<img src="{!URLFOR($Resource.HelloSPA, 'img/spa.gif')}" alt="SPA"/>
+		<script type="text/javascript" src="{!URLFOR($Resource.HelloSPA, 'app.js')}"/>
 		
 	</body>
 
