@@ -1,25 +1,126 @@
-<apex:page showHeader="false" sidebar="false" standardStylesheets="false"  >
-	
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" applyBodyTag="false"
+  docType="html-5.0">
+	<html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<head>
 		<title>Hello, SPA!</title>
-		<link rel="stylesheet" href="{!URLFOR($Resource.HelloSPA, 'app.css')}"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<!-- Load CSS in head of page-->
+		<apex:stylesheet value="{!URLFOR($Resource.SLDS052, 'SLDS052/assets/styles/salesforce-lightning-design-system-vf.css')}" />
+		<apex:stylesheet value="{!URLFOR($Resource.HelloSPA, 'app.css')}"/>
+		
+		<!-- reference any VF variables needed in a single global JS object -->
 		<script type="text/javascript" charset="UTF-8">
-
-		//this is our only global variable
 		configSettings ={
 			firstName : '{!$User.firstName}',
 			lastName  : '{!$User.lastName}'
 		}
 
 		</script>
+
 	</head>
 
 	<body>
 
-		<h1>Hello, <span id="userName"></span></h1>
-		<img src="{!URLFOR($Resource.HelloSPA, 'img/spa.gif')}" alt="SPA"/>
+		<!-- <h1>Hello, <span id="userName"></span></h1>
+		
+		<img src="{!URLFOR($Resource.HelloSPA, 'img/spa.gif')}" alt="SPA"/> -->
+
+		<div class="slds slds-p-around--xx-large slds-container--large slds-container--center">
+
+		    <header role="banner">
+		      <h1 class="slds-text-heading--label slds-m-bottom--small">Hello, <span id="userName"></span></h1>
+		    </header>
+
+		    <div class="main" role="main">
+
+		      <section aria-labelledby="anchor-component">
+		        <h2 id="anchor-component" class="slds-text-heading--large slds-p-top--medium slds-p-bottom--medium">Components/Anchor</h2>
+
+		        <div class="anchor anchor--rec-home">
+		          <div class="slds-grid slds-grid--align-spread">
+		            <div class="slds-media slds-col media--rec-home">
+		              <div class="slds-media__figure">
+		                <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-user">
+		                  <use xlink:href="{!URLFOR($Resource.SLDS052, 'SLDS052/assets/icons/standard-sprite/svg/symbols.svg#user')}" />
+		                </svg>
+		              </div>
+		              <div class="slds-media__body">
+		                <p class="slds-text-heading--label">Record Type</p>
+		                <div class="slds-grid">
+		                  <div class="slds-col">
+		                    <h1 class="slds-text-heading--medium slds-media--rec-home__title slds-truncate">Record Title</h1>
+		                  </div>
+		                  <div class="slds-col slds-shrink-none slds-align-bottom">
+		                    <button class="slds-button slds-button--neutral slds-not-selected" aria-live="assertive">
+		                      <span class="slds-text-not-selected">
+		                        <svg aria-hidden="true" class="slds-button__icon--stateful slds-button__icon--left">
+		                          <use xlink:href="{!URLFOR($Resource.SLDS052, 'SLDS052/assets/icons/utility-sprite/svg/symbols.svg#add')}" />
+		                        </svg>Follow</span>
+		                    </button>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+		            <div class="slds-col slds-shrink-none slds-align-bottom">
+		              <div class="slds-button-group" role="group">
+		                <button class="slds-button slds-button--neutral">Action 1</button>
+		                <button class="slds-button slds-button--neutral">Action 2</button>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </section>
+
+		      <section aria-labelledby="tabs-component">
+		        <h2 id="tabs-component" class="slds-text-heading--large slds-p-top--medium slds-p-bottom--medium">Components/Tabs</h2>
+
+		        <div class="slds-tabs--default" role="tablist">
+		          <ul class="slds-tabs--default__nav" role="presentation">
+		            <li class="slds-tabs__item slds-text-heading--label slds-active" title="Item One" role="presentation">
+		              <a href="#" role="tab" tabindex="0" aria-selected="true">Item One</a>
+		            </li>
+		            <li class="slds-tabs__item slds-text-heading--label" title="Item Two">
+		              <a href="#" role="tab" tabindex="-1" aria-selected="false">Item Two</a>
+		            </li>
+		            <li class="slds-tabs__item slds-text-heading--label" title="Item Three">
+		              <a href="#" role="tab" tabindex="-1" aria-selected="false">Item Three</a>
+		            </li>
+		          </ul>
+		          <div class="slds-tabs__content slds-show" role="tabpanel">
+		            <h2>Item One Content</h2>
+		          </div>
+		          <div class="slds-tabs__content slds-hide" role="tabpanel">
+		            <h2>Item Two Content</h2>
+		          </div>
+		          <div class="slds-tabs__content slds-hide" role="tabpanel">
+		            <h2>Item Three Content</h2>
+		          </div>
+		        </div>
+		      </section>
+
+		      <section aria-labelledby="badges">
+		        <h2 id="badges" class="slds-text-heading--large slds-p-top--x-large slds-p-bottom--medium">Components/Badges</h2>
+		        <div>
+		          <span class="slds-badge">Badge</span>
+		          <span class="slds-badge slds-theme--inverse">Badge</span>
+		        </div>
+		      </section>
+
+		    </div>
+
+		    <footer role="contentinfo" class="slds-p-top--x-large slds-p-bottom--x-large">
+		      <h2 id="labels" class="slds-text-heading--large slds-p-top--x-large slds-p-bottom--medium">Components/Grid</h2>
+		      <div class="slds-grid slds-grid--align-spread">
+		        <p class="slds-col">Footer Col 1: Lightning Design System tutorial</p>
+		        <p class="slds-col">Footer Col 2: Lightning Design System tutorial</p>
+		      </div>
+		    </footer>
+
+		</div>
+
+		<!-- Load Javascript at bottom of page body-->
 		<script type="text/javascript" src="{!URLFOR($Resource.HelloSPA, 'app.js')}"/>
 		
 	</body>
-
+	</html>
 </apex:page>
