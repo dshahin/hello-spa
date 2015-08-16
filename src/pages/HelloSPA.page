@@ -3,9 +3,11 @@
 	<head>
 		<title>Hello, SPA!</title>
 
-		<link rel="stylesheet" href="{!URLFOR($Resource.HelloSPA, '/HelloSPA/app.css')}"/>
+		<style>
+			body {background-color: lightblue;}
+		</style>
 		
-		<script type="text/javascript">
+		<script type="text/javascript" charset="UTF-8">
 
 		//this is our only global variable
 		configSettings ={
@@ -20,7 +22,7 @@
 
 		<h1>Hello, <span id="userName"></span></h1>
 		
-		<script type="text/javascript" src="{!URLFOR($Resource.HelloSPA, '/HelloSPA/app.js')}"/>
+		<script type="text/javascript" charset="UTF-8" src="{!URLFOR($Resource.HelloSPA)}"/>
 		
 	</body>
 
