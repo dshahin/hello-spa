@@ -1,7 +1,12 @@
 # hello-spa
 Scaffolding for a bare bones SPA in SFDC
 
-This app has no external dependencies and is a starting point for learning and building new SPAs.
+This app has no external dependencies and is great for: 
+
+- learning SPA basics
+- fast prototyping
+- a minimimal core for more complex SPAs
+
 
 ## install
 
